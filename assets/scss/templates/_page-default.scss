@@ -12,3 +12,23 @@
     }
   }
 }
+@mixin quote-mark (){
+            font-size: 100px;
+          color: #777;
+          font-family: Garamond
+}
+  // Blockquotes
+  blockquote {
+      border-radius: 5px;
+      font-weight: 300;
+      font-family: helvetica;
+      
+      &:before {
+          content: "“";
+          @include quote-mark();
+      }
+      &:after {
+          content: "”";
+          @include quote-mark();
+      }
+  }
